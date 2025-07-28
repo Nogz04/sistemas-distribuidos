@@ -14,7 +14,7 @@ São sistemas compostos por **múltiplos computadores independentes**, conectado
 
 O **Grid Computacional** é um tipo de sistema distribuído composto por diversos computadores autônomos, geograficamente distribuídos, heterogêneos (diferentes), e interconectados por redes, com o objetivo de compartilhar recursos computacionais de forma coordenada.
 
-## 🧩 Sistemas Fracamente Acoplados
+## 🧩 1. Sistemas Fracamente Acoplados
 
 - Os computadores que compõem o grid **não estão fortemente conectados** nem sincronizados constantemente.
 - Cada nó pode:
@@ -25,7 +25,7 @@ O **Grid Computacional** é um tipo de sistema distribuído composto por diverso
 
 ---
 
-## 🌍 Geograficamente Distribuídos
+## 🌍 2. Geograficamente Distribuídos
 
 - Os nós do grid estão localizados em diferentes lugares:
   - Diferentes prédios, cidades ou países.
@@ -34,7 +34,7 @@ O **Grid Computacional** é um tipo de sistema distribuído composto por diverso
 
 ---
 
-## 🧠 Hardware e sistemas computacionais diferentes nas máquinas
+## 🧠 3. Hardware e sistemas computacionais diferentes nas máquinas
 
 - As máquinas do grid podem ter:
   - **Arquiteturas diferentes** (Intel, AMD, ARM).
@@ -43,7 +43,7 @@ O **Grid Computacional** é um tipo de sistema distribuído composto por diverso
 
 ---
 
-## 🌐 Esquema de comunicação modelo TCP/IP
+## 🌐 4. Esquema de comunicação modelo TCP/IP
 
 - A troca de informações entre as máquinas ocorre através da **Internet ou redes locais**, utilizando:
   - **TCP/IP (Transmission Control Protocol / Internet Protocol)**.
