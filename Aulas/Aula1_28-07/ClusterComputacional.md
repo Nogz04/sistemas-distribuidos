@@ -1,6 +1,6 @@
-# Aula 1 - Sistemas Distribuidos
+# Aula 1 - Sistemas Paralelos
  
-## Sistemas fortemente acoplados - Cluster Computacional
+## Sistemas FORTEMENTE acoplados - Cluster Computacional
 
 > - Geograficamente na mesma localização
 > - Hardware igual para todas as maquinas
