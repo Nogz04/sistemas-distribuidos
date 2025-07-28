@@ -14,8 +14,6 @@
 
 Um **cluster computacional** é um conjunto de computadores interligados que funcionam como uma única unidade de processamento. Abaixo estão os principais elementos citados em aula, com suas respectivas funções no contexto de clusters de alto desempenho (HPC).
 
----
----
 
 ## 📍 1. Geograficamente na mesma localização
 
