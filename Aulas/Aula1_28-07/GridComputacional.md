@@ -7,6 +7,9 @@ São sistemas compostos por **múltiplos computadores independentes**, conectado
 > - Geograficamente Distribuídos
 > - Hardware e sistema computacional diferentes nas máquinas
 > - Esquema de comunicação modelo TCP/IP
+> - Programação distribuída
+> - Arquitetura de Sistemas
+>   - cliente-servidor 
 
 ---
 
