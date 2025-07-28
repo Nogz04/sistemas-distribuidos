@@ -1,1 +1,5 @@
-# sistemas-distribuidos
+# Sistemas Distribuidos
+
+### Professor
+
+> Alexandre Zamberlan
