@@ -155,7 +155,7 @@ Arquitetura é o modelo de como os nós (computadores) **se organizam e se comun
 
 ---
 
-## 🔄 Comunicação entre Processos
+## 🔄 7. Comunicação entre Processos
 
 Em sistemas distribuídos, os processos (programas) estão **em máquinas diferentes**, então precisam **se comunicar pela rede** para trabalhar em conjunto.
 
@@ -179,11 +179,11 @@ Em sistemas distribuídos, os processos (programas) estão **em máquinas difere
 
 ---
 
-## ⏱️ Sincronismo entre Processos
+## ⏱️ 8. Sincronismo entre Processos
 
 O sincronismo garante que os processos **coordenem suas ações corretamente**, mesmo que estejam executando **em lugares e tempos diferentes**.
 
-### 🕰️ 1. Relógio (Sincronismo Temporal)
+### 🕰️ Relógio (Sincronismo Temporal)
 
 - Cada máquina tem seu **próprio relógio**, que pode estar adiantado ou atrasado.
 - Isso causa problemas, por exemplo, quando é necessário saber **qual evento aconteceu primeiro**.
@@ -195,7 +195,7 @@ O sincronismo garante que os processos **coordenem suas ações corretamente**, 
 
 ---
 
-### 🧵 2. Monitor ou Semáforo (Sincronismo de Acesso)
+### 🧵 Monitor ou Semáforo (Sincronismo de Acesso)
 
 Quando vários processos acessam um mesmo recurso (ex: arquivo ou variável), é preciso **controlar quem acessa e quando**.
 
@@ -209,7 +209,7 @@ Imagine dois processos tentando gravar no mesmo arquivo. Sem controle, os dados 
 
 ---
 
-### 📬 3. Fila de Mensagens (Message Queue)
+### 📬 Fila de Mensagens (Message Queue)
 
 A **message queue** é uma forma eficiente e segura de **sincronizar e comunicar processos de forma assíncrona**.
 
@@ -230,7 +230,7 @@ A **message queue** é uma forma eficiente e segura de **sincronizar e comunicar
 
 ---
 
-## 🛡️ Tolerância a Falhas
+## 🛡️ 9. Tolerância a Falhas
 
 Em um sistema distribuído, é comum que **algumas partes falhem**. A tolerância a falhas garante que o sistema **continue funcionando**, mesmo que um ou mais componentes parem.
 
