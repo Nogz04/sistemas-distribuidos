@@ -11,6 +11,7 @@ São sistemas que utilizam **múltiplos processadores** ou núcleos **trabalhand
 > - Sistema de backup
 > - Programação paralela
 
+---
 
 ## Cluster Computacional - Características e Componentes
 
