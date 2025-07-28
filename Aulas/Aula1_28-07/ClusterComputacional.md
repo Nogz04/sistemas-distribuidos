@@ -1,5 +1,7 @@
 # Aula 1 - Sistemas Paralelos
- 
+
+São sistemas que utilizam **múltiplos processadores** ou núcleos **trabalhando simultaneamente** para resolver um problema único de forma mais rápida. Todos os processadores compartilham um ambiente comum (memória, sistema operacional ou barramento).
+
 ## Sistemas FORTEMENTE acoplados - Cluster Computacional
 
 > - Geograficamente na mesma localização
