@@ -8,7 +8,7 @@
 
 > Quando a tarefa é extremamente simples, com baixa complexidade (esforço computacional), e não necessita de threads.
 
-> Quando o ganho de desempenho é mínimo ou quando o custo de gerenciar múltiplas threads excede os benefícios
+> Quando o ganho de desempenho é mínimo ou quando o custo de gerenciar múltiplas threads excede os benefícios.
 
 > Threads podem causar deadlocks, condições de corrida e liveness bugs se não forem sincronizadas corretamente. Em aplicações simples ou com acesso limitado a recursos compartilhados, a complexidade de implementar mecanismos de sincronização pode não valer a pena.
 
