@@ -46,7 +46,7 @@ Agora B sabe que o evento de A (2) aconteceu antes do recebimento (3).
 
 ---
 
-## 3. Diferença entre Relógio Físico e Lógico
+## Diferença entre Relógio Físico e Lógico
 
 | Relógio Físico | Relógio Lógico |
 |----------------|----------------|
@@ -56,7 +56,7 @@ Agora B sabe que o evento de A (2) aconteceu antes do recebimento (3).
 
 ---
 
-## 4. Exemplos práticos
+## Exemplos práticos
 
 ### a) Sistema distribuído (bancos)
 - Dois caixas eletrônicos processam transações.
@@ -73,7 +73,7 @@ Agora B sabe que o evento de A (2) aconteceu antes do recebimento (3).
 
 ---
 
-## 5. Resumo Intuitivo
+## No geral:
 
 - **Relógio físico** → mede tempo real, mas pode estar diferente em cada máquina.
 - **Relógio lógico** → apenas um contador que cresce com eventos, garantindo **ordem causal** entre processos.
@@ -160,3 +160,110 @@ public class SimulacaoDistribuida {
 | 5     | Envia mensagem  | B        | 5       |
 | 6     | Recebe mensagem | A        | 6       |
 | 7     | Evento local    | A        | 7       |
+
+---
+
+## 🚫 3. Exclusão Mútua (Mutual Exclusion)
+
+### O que é:
+Exclusão mútua garante que **apenas um processo por vez acesse uma seção crítica** (um recurso compartilhado, como uma impressora ou banco de dados) em sistemas concorrentes ou distribuídos.
+
+### Propriedades importantes:
+1. **Mutualidade:** no máximo 1 processo na seção crítica.  
+2. **Progresso:** se nenhum processo está na seção crítica, algum processo que queira entrar será autorizado.  
+3. **Espera limitada (bounded waiting):** nenhum processo fica esperando para sempre.
+
+### Exemplo Java:
+
+```java
+class RecursoCompartilhado {
+    public synchronized void acessar(int id) {
+        System.out.println("Processo " + id + " entrou na seção crítica");
+        try {
+            Thread.sleep(1000); // simula operação
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Processo " + id + " saiu da seção crítica");
+    }
+}
+
+public class ExclusaoMutuaDemo {
+    public static void main(String[] args) {
+        RecursoCompartilhado recurso = new RecursoCompartilhado();
+
+        Runnable tarefa1 = () -> recurso.acessar(1);
+        Runnable tarefa2 = () -> recurso.acessar(2);
+
+        new Thread(tarefa1).start();
+        new Thread(tarefa2).start();
+    }
+}
+
+```
+### Synchronized em Java:
+
+***O que é?*** <br>
+
+`synchronized` é uma palavra-chave do Java usada para **controlar o acesso de múltiplas threads a um recurso compartilhado**.
+
+- Ele garante que **apenas uma thread por vez** execute um bloco de código ou método sincronizado.
+- É a maneira mais simples de implementar **exclusão mútua** em Java.
+
+
+# 🗳️ 4. Eleição de Líder (Leader Election)
+
+## O que é:
+
+Em sistemas distribuídos, às vezes é necessário **eleger um processo como coordenador ou líder** para tomar decisões ou gerenciar recursos.
+
+- Por exemplo, apenas um servidor coordena backups.
+- A eleição ocorre quando: <br>
+  1 - Nenhum líder existe.<br>
+  2 - O líder atual falha.<br>
+
+---
+
+## Algoritmo clássico: Bully Algorithm
+
+1 -  Cada processo tem um **ID único**. <br>
+2 - Um processo detecta que o líder morreu e **inicia eleição**.<br>
+3 - Ele envia mensagens para todos os processos com **ID maior**.<br>
+4 - Se ninguém responde, ele se torna o líder.<br>
+5 - Se algum processo maior responde, este processo maior assume a eleição.<br>
+
+---
+
+## Exemplo Java simplificado:
+
+```java
+class Processo {
+    int id;
+    boolean lider = false;
+
+    public Processo(int id) {
+        this.id = id;
+    }
+
+    public void iniciarEleicao(Processo[] processos) {
+        boolean existeMaior = false;
+        for (Processo p : processos) {
+            if (p.id > this.id) {
+                System.out.println("Processo " + this.id + " envia mensagem para " + p.id);
+                existeMaior = true;
+            }
+        }
+        if (!existeMaior) {
+            lider = true;
+            System.out.println("Processo " + id + " é o líder!");
+        }
+    }
+}
+
+public class EleicaoDemo {
+    public static void main(String[] args) {
+        Processo[] processos = {new Processo(1), new Processo(2), new Processo(3)};
+
+        processos[0].iniciarEleicao(processos); // Processo 1 inicia eleição
+    }
+}
