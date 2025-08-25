@@ -149,7 +149,7 @@ public class SimulacaoDistribuida {
 
 ```
 
-***Ordem dos valores que foram atribuídos a L (Relógio lógico) de A e B ao decorrer dos eventos***
+**Ordem dos valores que foram atribuídos a L (Relógio lógico) de A e B ao decorrer dos eventos**
 
 | Passo | Evento          | Processo | L final |
 | ----- | --------------- | -------- | ------- |
