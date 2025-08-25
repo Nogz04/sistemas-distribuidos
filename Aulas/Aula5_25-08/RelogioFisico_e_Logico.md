@@ -87,7 +87,7 @@ Agora B sabe que o evento de A (2) aconteceu antes do recebimento (3).
 
 class Processo {
     private int id;
-    private int L = 0; // Relógio lógico inicial
+    private int L = 0; //Relógio lógico inicial
 
     public Processo(int id) {
         this.id = id;
@@ -116,11 +116,11 @@ public class SimulacaoDistribuida {
         Processo A = new Processo(1);
         Processo B = new Processo(2);
 
-        // Passo 1: evento local em A
+        //Passo 1: evento local em A
         A.eventoLocal(); 
         // A: L = 1
 
-        // Passo 2: A envia mensagem para B
+        //Passo 2: A envia mensagem para B
         int L_msg = A.enviarMensagem(); 
         // A: L = 2 (valor enviado)
 
@@ -136,7 +136,7 @@ public class SimulacaoDistribuida {
         int L_msg2 = B.enviarMensagem();
         // B: L = 5 (valor enviado)
 
-        // Passo 6: A recebe mensagem de B
+        //Passo 6: A recebe mensagem de B
         A.receberMensagem(L_msg2);
         // A: L = Math.max(2,5)+1 = 6
 
