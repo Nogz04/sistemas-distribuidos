@@ -1,4 +1,4 @@
-# Relógios Físicos e Lógicos em Computação
+# Relógios Físicos e Lógicos / Exclusão Mútua e Eleição.
 
 ## 1. Relógios Físicos ⏰
 
