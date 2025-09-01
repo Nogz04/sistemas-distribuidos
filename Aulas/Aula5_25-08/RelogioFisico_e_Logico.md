@@ -81,7 +81,7 @@ Agora B sabe que o evento de A (2) aconteceu antes do recebimento (3).
 
 ---
 
-## Exemplo de código em JAVA de relógio físico na prática:
+## Exemplo de código em JAVA de relógio lógico na prática:
 
 ```java
 
